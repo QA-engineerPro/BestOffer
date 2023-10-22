@@ -1,0 +1,32 @@
+
+Вопрос 1. Сколько всего животных у вас (добавьте в ограничение ваше полное имя)?
+
+SELECT COUNT (*)
+FROM animal_info
+WHERE NOT  owner ='Николай'
+;
+
+Вопрос 2. Уникальные имена всех кошек, отсортированные по алфавиту. Если вы родились в четный день, 
+то сортировать от А до Я, если в нечетный день, то от Я до А.
+Дата рождения 31 декабря, значит выбираем сортировку от Я до А.
+
+
+SELECT name
+FROM animal_info AS ai
+INNER JOIN  animal_classes AS ac
+ON ai.class = ac.id
+WHERE ac.class ='кошка'
+ORDER BY name DESC
+;
+
+Вопрос 3. Найти количество животных каждого класса. Вывести количество и имя класса для тех классов, 
+количество животных в которых больше n. Число n — номер месяца вашего рождения.
+
+SELECT ac.class, COUNT (*)
+FROM animal_info AS ai
+INNER JOIN animal_classes AS ac
+ON ai.class = ac.id 
+GROUP BY  ac.class
+HAVING COUNT (*) >12
+;
+
