@@ -1,0 +1,1246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1251"/>
+	<title>Jira</title>
+	<meta name="generator" content="Neat Office 6.2.8.2 (Windows)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2023-10-15T15:32:16.621000000"/>
+	<style type="text/css">
+		h3.cjk { font-family: "NSimSun" }
+		h3.ctl { font-family: "Arial" }
+	</style>
+</head>
+<body lang="ru-RU" dir="ltr">
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background: #ffffff; page-break-before: always">
+	<tr>
+		<td colspan="2" width="100%" valign="top" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><h3 class="western">
+			[TG1-5]&nbsp;<a href="https://nu-bug-report.atlassian.net/browse/TG1-5">Поле
+			&quot;время&quot; в части hh принимает цифры 24 и более</a>
+			Создано: 29/мая/23 &nbsp;Обновлено: 29/мая/23 
+			</h3>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" style="border: none; padding: 0cm"><p><b>Статус:</b></p>
+		</td>
+		<td width="80%" style="border: none; padding: 0cm"><p>К выполнению</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" style="border: none; padding: 0cm"><p><b>Проект:</b></p>
+		</td>
+		<td width="80%" style="border: none; padding: 0cm"><p><a href="https://nu-bug-report.atlassian.net/secure/BrowseProject.jspa?id=10009">Курсовая
+			работа. Курс 1</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p><b>Компоненты:</b></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p>Нет 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p><b>Версии Affects:</b></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p>Нет 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p><b>Версии исправления:</b></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p>Нет 
+			</p>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background: #ffffff">
+	<tr>
+		<td width="20%" valign="top" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Тип:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Баг 
+			</p>
+		</td>
+		<td bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Приоритет:</b> 
+			</p>
+		</td>
+		<td valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Medium 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Автор:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p><a name="word_reporter_640ae53f2847866310026ea2"></a>
+			<a href="https://nu-bug-report.atlassian.net/secure/ViewProfile.jspa?accountId=640ae53f2847866310026ea2">Nikolay
+			</a>
+			</p>
+		</td>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Исполнитель:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не назначено 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Решение:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Нет решения 
+			</p>
+		</td>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Голоса:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			0 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p><a name="labels-10068-value"></a>
+			<b>Метки:</b> 
+			</p>
+		</td>
+		<td colspan="3" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Нет 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Оценка остатка:</b></p>
+		</td>
+		<td colspan="3" width="80%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не определено 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Затраченное время:</b></p>
+		</td>
+		<td colspan="3" width="80%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не определено 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Исходная оценка:</b></p>
+		</td>
+		<td colspan="3" width="80%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не определено 
+			</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Среда:</b> 
+			</p>
+		</td>
+		<td colspan="3" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Любая</p>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background: #ffffff">
+	<col width="204*"/>
+
+	<col width="52*"/>
+
+	<tr valign="top">
+		<td width="80%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p style="margin-bottom: 0cm">
+			<b>Связи задачи:</b> 
+			</p>
+			<table width="854" cellpadding="0" cellspacing="0">
+				<col width="45"/>
+
+				<col width="152"/>
+
+				<col width="400"/>
+
+				<col width="257"/>
+
+				<tr>
+					<td colspan="4" width="854" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+						<b>Cloners</b></p>
+					</td>
+				</tr>
+				<tr>
+					<td width="45" style="border: none; padding: 0cm"><p>clones 
+						</p>
+					</td>
+					<td width="152" style="border: none; padding: 0cm"><p><a href="https://nu-bug-report.atlassian.net/browse/TG1-4">TG1-4
+						</a>
+						</p>
+					</td>
+					<td width="400" style="border: none; padding: 0cm"><p>Поле
+						&quot;время&quot; в части mm принимает циф... 
+						</p>
+					</td>
+					<td width="257" style="border: none; padding: 0cm"><p>К
+						выполнению 
+						</p>
+					</td>
+				</tr>
+			</table>
+			<p><br/>
+<br/>
+
+			</p>
+		</td>
+		<td width="20%" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"></td>
+	</tr>
+</table>
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<center>
+	<table width="100%" cellpadding="2" cellspacing="0">
+		<tr>
+			<td width="1%" bgcolor="#bbbbbb" style="background: #bbbbbb" style="border: none; padding: 0cm"><p align="center">
+				&nbsp;<font color="#ffffff"><b>Описание</b></font>&nbsp; 
+				</p>
+			</td>
+			<td style="border: none; padding: 0cm"><p>&nbsp;</p>
+			</td>
+		</tr>
+	</table>
+</center>
+<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td style="border: 1px solid #cccccc; padding: 0.05cm"><p><a name="descriptionArea"></a>
+			Шаги:</p>
+			<ol>
+				<li><p style="margin-bottom: 0cm">Зайти на сайт
+				<a href="https://teachers.skyeng.ru/">https://teachers.skyeng.ru/</a>
+				под логином и паролем 
+				</p>
+				<li><p style="margin-bottom: 0cm">Кликнуть на раздел <b>Расписание</b>
+								</p>
+				<li><p style="margin-bottom: 0cm">Кликнуть на любой свободный
+				слот 
+				</p>
+				<li><p style="margin-bottom: 0cm">Нажать на кнопку <b>личные
+				события</b> 
+				</p>
+				<li><p>В поле время в части hh ввести цифры 24 и более , например
+				55 
+				</p>
+			</ol>
+			<p>ОР: Поле не принимает 24 и более</p>
+			<p>ФР: Поле принимает 
+			</p>
+			<p>Серьезность: S3</p>
+			<p><br/>
+
+			</p>
+		</td>
+	</tr>
+</table>
+<hr/>
+
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; page-break-before: always"><br/>
+
+</p>
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background: #ffffff">
+	<tr>
+		<td colspan="2" width="100%" valign="top" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><h3 class="western">
+			[TG1-4]&nbsp;<a href="https://nu-bug-report.atlassian.net/browse/TG1-4">Поле
+			&quot;время&quot; в части mm принимает цифры 60 и более</a>
+			Создано: 29/мая/23 &nbsp;Обновлено: 29/мая/23 
+			</h3>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" style="border: none; padding: 0cm"><p><b>Статус:</b></p>
+		</td>
+		<td width="80%" style="border: none; padding: 0cm"><p>К выполнению</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" style="border: none; padding: 0cm"><p><b>Проект:</b></p>
+		</td>
+		<td width="80%" style="border: none; padding: 0cm"><p><a href="https://nu-bug-report.atlassian.net/secure/BrowseProject.jspa?id=10009">Курсовая
+			работа. Курс 1</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p><b>Компоненты:</b></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p>Нет 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p><b>Версии Affects:</b></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p>Нет 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p><b>Версии исправления:</b></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p>Нет 
+			</p>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background: #ffffff">
+	<tr>
+		<td width="20%" valign="top" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Тип:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Баг 
+			</p>
+		</td>
+		<td bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Приоритет:</b> 
+			</p>
+		</td>
+		<td valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Medium 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Автор:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p><a name="word_reporter_640ae53f2847866310026ea21"></a>
+			<a href="https://nu-bug-report.atlassian.net/secure/ViewProfile.jspa?accountId=640ae53f2847866310026ea2">Nikolay
+			</a>
+			</p>
+		</td>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Исполнитель:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не назначено 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Решение:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Нет решения 
+			</p>
+		</td>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Голоса:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			0 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p><a name="labels-10067-value"></a>
+			<b>Метки:</b> 
+			</p>
+		</td>
+		<td colspan="3" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Нет 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Оценка остатка:</b></p>
+		</td>
+		<td colspan="3" width="80%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не определено 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Затраченное время:</b></p>
+		</td>
+		<td colspan="3" width="80%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не определено 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Исходная оценка:</b></p>
+		</td>
+		<td colspan="3" width="80%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не определено 
+			</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Среда:</b> 
+			</p>
+		</td>
+		<td colspan="3" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Любая</p>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background: #ffffff">
+	<col width="166*"/>
+
+	<col width="90*"/>
+
+	<tr valign="top">
+		<td width="65%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p style="margin-bottom: 0cm">
+			<b>Связи задачи:</b> 
+			</p>
+			<table width="695" cellpadding="0" cellspacing="0">
+				<col width="60"/>
+
+				<col width="99"/>
+
+				<col width="295"/>
+
+				<col width="241"/>
+
+				<tr>
+					<td colspan="4" width="695" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+						<b>Cloners</b></p>
+					</td>
+				</tr>
+				<tr>
+					<td width="60" style="border: none; padding: 0cm"><p>is cloned
+						by 
+						</p>
+					</td>
+					<td width="99" style="border: none; padding: 0cm"><p><a href="https://nu-bug-report.atlassian.net/browse/TG1-5">TG1-5
+						</a>
+						</p>
+					</td>
+					<td width="295" style="border: none; padding: 0cm"><p>Поле
+						&quot;время&quot; в части hh принимает циф... 
+						</p>
+					</td>
+					<td width="241" style="border: none; padding: 0cm"><p>К
+						выполнению 
+						</p>
+					</td>
+				</tr>
+			</table>
+			<p><br/>
+<br/>
+
+			</p>
+		</td>
+		<td width="35%" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"></td>
+	</tr>
+</table>
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<center>
+	<table width="100%" cellpadding="2" cellspacing="0">
+		<tr>
+			<td width="1%" bgcolor="#bbbbbb" style="background: #bbbbbb" style="border: none; padding: 0cm"><p align="center">
+				&nbsp;<font color="#ffffff"><b>Описание</b></font>&nbsp; 
+				</p>
+			</td>
+			<td style="border: none; padding: 0cm"><p>&nbsp;</p>
+			</td>
+		</tr>
+	</table>
+</center>
+<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td style="border: 1px solid #cccccc; padding: 0.05cm"><p><a name="descriptionArea2"></a><a name="descriptionArea1"></a>
+			Шаги:</p>
+			<ol>
+				<li><p style="margin-bottom: 0cm">Зайти на сайт
+				<a href="https://teachers.skyeng.ru/">https://teachers.skyeng.ru/</a>
+				под логином и паролем 
+				</p>
+				<li><p style="margin-bottom: 0cm">Кликнуть на раздел <b>Расписание</b>
+								</p>
+				<li><p style="margin-bottom: 0cm">Кликнуть на любой свободный
+				слот 
+				</p>
+				<li><p style="margin-bottom: 0cm">Нажать на кнопку <b>личные
+				события</b> 
+				</p>
+				<li><p>В поле время в части mm ввести цифры 60 и более , например
+				88 
+				</p>
+			</ol>
+			<p>ОР: Поле не принимает 88 и более</p>
+			<p>ФР: Поле принимает 
+			</p>
+			<p>Серьезность: S3</p>
+			<p><br/>
+
+			</p>
+		</td>
+	</tr>
+</table>
+<hr/>
+
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; page-break-before: always"><br/>
+
+</p>
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background: #ffffff">
+	<tr>
+		<td colspan="2" width="100%" valign="top" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><h3 class="western">
+			[TG1-3]&nbsp;<a href="https://nu-bug-report.atlassian.net/browse/TG1-3">Поле
+			&quot;Время&quot; принимает символы при добавлении события</a>
+			Создано: 29/мая/23 &nbsp;Обновлено: 29/мая/23 
+			</h3>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" style="border: none; padding: 0cm"><p><b>Статус:</b></p>
+		</td>
+		<td width="80%" style="border: none; padding: 0cm"><p>К выполнению</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" style="border: none; padding: 0cm"><p><b>Проект:</b></p>
+		</td>
+		<td width="80%" style="border: none; padding: 0cm"><p><a href="https://nu-bug-report.atlassian.net/secure/BrowseProject.jspa?id=10009">Курсовая
+			работа. Курс 1</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p><b>Компоненты:</b></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p>Нет 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p><b>Версии Affects:</b></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p>Нет 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p><b>Версии исправления:</b></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p>Нет 
+			</p>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background: #ffffff">
+	<tr>
+		<td width="20%" valign="top" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Тип:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Баг 
+			</p>
+		</td>
+		<td bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Приоритет:</b> 
+			</p>
+		</td>
+		<td valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Medium 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Автор:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p><a name="word_reporter_640ae53f2847866310026ea22"></a>
+			<a href="https://nu-bug-report.atlassian.net/secure/ViewProfile.jspa?accountId=640ae53f2847866310026ea2">Nikolay
+			</a>
+			</p>
+		</td>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Исполнитель:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не назначено 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Решение:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Нет решения 
+			</p>
+		</td>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Голоса:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			0 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p><a name="labels-10066-value"></a>
+			<b>Метки:</b> 
+			</p>
+		</td>
+		<td colspan="3" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Нет 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Оценка остатка:</b></p>
+		</td>
+		<td colspan="3" width="80%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не определено 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Затраченное время:</b></p>
+		</td>
+		<td colspan="3" width="80%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не определено 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Исходная оценка:</b></p>
+		</td>
+		<td colspan="3" width="80%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не определено 
+			</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Среда:</b> 
+			</p>
+		</td>
+		<td colspan="3" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Любая</p>
+		</td>
+	</tr>
+</table>
+<p><br/>
+<br/>
+
+</p>
+<center>
+	<table width="100%" cellpadding="2" cellspacing="0">
+		<tr>
+			<td width="1%" bgcolor="#bbbbbb" style="background: #bbbbbb" style="border: none; padding: 0cm"><p align="center">
+				&nbsp;<font color="#ffffff"><b>Описание</b></font>&nbsp; 
+				</p>
+			</td>
+			<td style="border: none; padding: 0cm"><p>&nbsp;</p>
+			</td>
+		</tr>
+	</table>
+</center>
+<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td style="border: 1px solid #cccccc; padding: 0.05cm"><p><a name="descriptionArea4"></a><a name="descriptionArea3"></a>
+			Шаги:</p>
+			<ol>
+				<li><p style="margin-bottom: 0cm">Зайти на сайт
+				<a href="https://teachers.skyeng.ru/">https://teachers.skyeng.ru/</a>
+				под логином и паролем 
+				</p>
+				<li><p style="margin-bottom: 0cm">Кликнуть на раздел <b>Расписание</b>
+								</p>
+				<li><p style="margin-bottom: 0cm">Кликнуть на любой свободный
+				слот 
+				</p>
+				<li><p style="margin-bottom: 0cm">Нажать на кнопку <b>личные
+				события</b> 
+				</p>
+				<li><p>В поле <b>Время</b> ввести символы, например№№ 
+				</p>
+			</ol>
+			<p>ОР: Символы не принимаются полем</p>
+			<p>ФР: Символы принимаются</p>
+			<p>Серьезность: S3</p>
+			<p><br/>
+
+			</p>
+		</td>
+	</tr>
+</table>
+<hr/>
+
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; page-break-before: always"><br/>
+
+</p>
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background: #ffffff">
+	<tr>
+		<td colspan="2" width="100%" valign="top" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><h3 class="western">
+			[TG1-2]&nbsp;<a href="https://nu-bug-report.atlassian.net/browse/TG1-2">В
+			выпадающем списке при добавлении события отсутствуют даты за
+			прошлый месяц</a> Создано: 29/мая/23 &nbsp;Обновлено: 29/мая/23 
+			</h3>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" style="border: none; padding: 0cm"><p><b>Статус:</b></p>
+		</td>
+		<td width="80%" style="border: none; padding: 0cm"><p>К выполнению</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" style="border: none; padding: 0cm"><p><b>Проект:</b></p>
+		</td>
+		<td width="80%" style="border: none; padding: 0cm"><p><a href="https://nu-bug-report.atlassian.net/secure/BrowseProject.jspa?id=10009">Курсовая
+			работа. Курс 1</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p><b>Компоненты:</b></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p>Нет 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p><b>Версии Affects:</b></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p>Нет 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p><b>Версии исправления:</b></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p>Нет 
+			</p>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background: #ffffff">
+	<tr>
+		<td width="20%" valign="top" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Тип:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Баг 
+			</p>
+		</td>
+		<td bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Приоритет:</b> 
+			</p>
+		</td>
+		<td valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Highest 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Автор:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p><a name="word_reporter_640ae53f2847866310026ea23"></a>
+			<a href="https://nu-bug-report.atlassian.net/secure/ViewProfile.jspa?accountId=640ae53f2847866310026ea2">Nikolay
+			</a>
+			</p>
+		</td>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Исполнитель:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не назначено 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Решение:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Нет решения 
+			</p>
+		</td>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Голоса:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			0 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p><a name="labels-10065-value"></a>
+			<b>Метки:</b> 
+			</p>
+		</td>
+		<td colspan="3" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Нет 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Оценка остатка:</b></p>
+		</td>
+		<td colspan="3" width="80%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не определено 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Затраченное время:</b></p>
+		</td>
+		<td colspan="3" width="80%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не определено 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Исходная оценка:</b></p>
+		</td>
+		<td colspan="3" width="80%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не определено 
+			</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Среда:</b> 
+			</p>
+		</td>
+		<td colspan="3" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			любая</p>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background: #ffffff">
+	<col width="116*"/>
+
+	<col width="140*"/>
+
+	<tr valign="top">
+		<td width="46%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p style="margin-bottom: 0cm">
+			<b>Связи задачи:</b> 
+			</p>
+			<table width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td colspan="4" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+						<b>Cloners</b></p>
+					</td>
+				</tr>
+				<tr>
+					<td style="border: none; padding: 0cm"><p>clones 
+						</p>
+					</td>
+					<td style="border: none; padding: 0cm"><p><a href="https://nu-bug-report.atlassian.net/browse/TG1-1">TG1-1
+						</a>
+						</p>
+					</td>
+					<td style="border: none; padding: 0cm"><p>Выбор даты в прошлом
+						при создании нов... 
+						</p>
+					</td>
+					<td style="border: none; padding: 0cm"><p>К выполнению 
+						</p>
+					</td>
+				</tr>
+			</table>
+			<p><br/>
+<br/>
+
+			</p>
+		</td>
+		<td width="54%" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"></td>
+	</tr>
+</table>
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<center>
+	<table width="100%" cellpadding="2" cellspacing="0">
+		<tr>
+			<td width="1%" bgcolor="#bbbbbb" style="background: #bbbbbb" style="border: none; padding: 0cm"><p align="center">
+				&nbsp;<font color="#ffffff"><b>Описание</b></font>&nbsp; 
+				</p>
+			</td>
+			<td style="border: none; padding: 0cm"><p>&nbsp;</p>
+			</td>
+		</tr>
+	</table>
+</center>
+<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td style="border: 1px solid #cccccc; padding: 0.05cm"><p><a name="descriptionArea6"></a><a name="descriptionArea5"></a>
+			Шаги:</p>
+			<ol>
+				<li><p style="margin-bottom: 0cm">Зайти на сайт
+				<a href="https://teachers.skyeng.ru/">https://teachers.skyeng.ru/</a>
+				под логином и паролем 
+				</p>
+				<li><p style="margin-bottom: 0cm">Кликнуть на раздел <b>Расписание</b>
+								</p>
+				<li><p style="margin-bottom: 0cm">Кликнуть на любой свободный
+				слот 
+				</p>
+				<li><p style="margin-bottom: 0cm">Нажать на кнопку <b>личные
+				события</b> 
+				</p>
+				<li><p style="margin-bottom: 0cm">Заполнить поле <b>Название
+				события</b> 
+				</p>
+				<li><p>Выбрать в поле <b>День и время</b> дату из прошлого
+				месяца, например 05.04.2023 
+				</p>
+			</ol>
+			<p>ОР: В списке можно выбрать дату из прошлого месяца 
+			</p>
+			<p>ФР: В списке отсутствуют даты прошлого месяца</p>
+			<p>Серьезность :S2 
+			</p>
+			<p><br/>
+
+			</p>
+		</td>
+	</tr>
+</table>
+<hr/>
+
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; page-break-before: always"><br/>
+
+</p>
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background: #ffffff">
+	<tr>
+		<td colspan="2" width="100%" valign="top" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><h3 class="western">
+			[TG1-1]&nbsp;<a href="https://nu-bug-report.atlassian.net/browse/TG1-1">Выбор
+			даты в прошлом при создании нового события ограничен неделью</a>
+			Создано: 28/мая/23 &nbsp;Обновлено: 29/мая/23 
+			</h3>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" style="border: none; padding: 0cm"><p><b>Статус:</b></p>
+		</td>
+		<td width="80%" style="border: none; padding: 0cm"><p>К выполнению</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" style="border: none; padding: 0cm"><p><b>Проект:</b></p>
+		</td>
+		<td width="80%" style="border: none; padding: 0cm"><p><a href="https://nu-bug-report.atlassian.net/secure/BrowseProject.jspa?id=10009">Курсовая
+			работа. Курс 1</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p><b>Компоненты:</b></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p>Нет 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p><b>Версии Affects:</b></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p>Нет 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p><b>Версии исправления:</b></p>
+		</td>
+		<td style="border: none; padding: 0cm"><p>Нет 
+			</p>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background: #ffffff">
+	<tr>
+		<td width="20%" valign="top" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Тип:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Баг 
+			</p>
+		</td>
+		<td bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Приоритет:</b> 
+			</p>
+		</td>
+		<td valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Highest 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Автор:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p><a name="word_reporter_640ae53f2847866310026ea24"></a>
+			<a href="https://nu-bug-report.atlassian.net/secure/ViewProfile.jspa?accountId=640ae53f2847866310026ea2">Nikolay
+			</a>
+			</p>
+		</td>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Исполнитель:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не назначено 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Решение:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Нет решения 
+			</p>
+		</td>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Голоса:</b> 
+			</p>
+		</td>
+		<td width="30%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			0 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p><a name="labels-10064-value"></a>
+			<b>Метки:</b> 
+			</p>
+		</td>
+		<td colspan="3" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Нет 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Оценка остатка:</b></p>
+		</td>
+		<td colspan="3" width="80%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не определено 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Затраченное время:</b></p>
+		</td>
+		<td colspan="3" width="80%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не определено 
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Исходная оценка:</b></p>
+		</td>
+		<td colspan="3" width="80%" valign="top" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			Не определено 
+			</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+			<b>Среда:</b> 
+			</p>
+		</td>
+		<td colspan="3" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"><p>
+			любая</p>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background: #ffffff">
+	<col width="137*"/>
+
+	<col width="119*"/>
+
+	<tr valign="top">
+		<td width="53%" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p style="margin-bottom: 0cm">
+			<b>Связи задачи:</b> 
+			</p>
+			<table width="714" cellpadding="0" cellspacing="0">
+				<col width="43"/>
+
+				<col width="78"/>
+
+				<col width="306"/>
+
+				<col width="287"/>
+
+				<tr>
+					<td colspan="4" width="714" bgcolor="#f0f0f0" style="background: #f0f0f0" style="border: none; padding: 0cm"><p>
+						<b>Cloners</b></p>
+					</td>
+				</tr>
+				<tr>
+					<td width="43" style="border: none; padding: 0cm"><p>is cloned
+						by 
+						</p>
+					</td>
+					<td width="78" style="border: none; padding: 0cm"><p><a href="https://nu-bug-report.atlassian.net/browse/TG1-2">TG1-2
+						</a>
+						</p>
+					</td>
+					<td width="306" style="border: none; padding: 0cm"><p>В
+						выпадающем списке при добавлении со... 
+						</p>
+					</td>
+					<td width="287" style="border: none; padding: 0cm"><p>К
+						выполнению 
+						</p>
+					</td>
+				</tr>
+			</table>
+			<p><br/>
+<br/>
+
+			</p>
+		</td>
+		<td width="47%" bgcolor="#ffffff" style="background: #ffffff" style="border: none; padding: 0cm"></td>
+	</tr>
+</table>
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<center>
+	<table width="100%" cellpadding="2" cellspacing="0">
+		<tr>
+			<td width="1%" bgcolor="#bbbbbb" style="background: #bbbbbb" style="border: none; padding: 0cm"><p align="center">
+				&nbsp;<font color="#ffffff"><b>Описание</b></font>&nbsp; 
+				</p>
+			</td>
+			<td style="border: none; padding: 0cm"><p>&nbsp;</p>
+			</td>
+		</tr>
+	</table>
+</center>
+<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td style="border: 1px solid #cccccc; padding: 0.05cm"><p><a name="descriptionArea8"></a><a name="descriptionArea7"></a>
+			Шаги:</p>
+			<ol>
+				<li><p style="margin-bottom: 0cm">Зайти на сайт
+				<a href="https://teachers.skyeng.ru/">https://teachers.skyeng.ru/</a>
+				под логином и паролем 
+				</p>
+				<li><p style="margin-bottom: 0cm">Кликнуть на раздел <b>Расписание</b>
+								</p>
+				<li><p style="margin-bottom: 0cm">Кликнуть на любой свободный
+				слот 
+				</p>
+				<li><p style="margin-bottom: 0cm">Нажать на кнопку <b>личные
+				события</b> 
+				</p>
+				<li><p style="margin-bottom: 0cm">Заполнить поле <b>Название
+				события</b> 
+				</p>
+				<li><p>Выбрать в поле <b>День и время</b> дату из прошлого
+				месяца, например 05.04.2023 
+				</p>
+			</ol>
+			<p>ОР: В списке можно выбрать дату из прошлого месяца 
+			</p>
+			<p>ФР: В списке отсутствуют даты прошлого месяца</p>
+			<p>Серьезность :S2 
+			</p>
+			<p><br/>
+
+			</p>
+		</td>
+	</tr>
+</table>
+<hr/>
+
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; page-break-before: always"><br/>
+Полученный
+Sun Oct 15 12:26:08 UTC 2023 Nikolay используя JIRA
+1001.0.0-SNAPSHOT#100238-sha1:a5bd220dd233d6acf65fadffb1c24624314449af.
+</p>
+</body>
+</html>
