@@ -1,0 +1,834 @@
+{
+	"info": {
+		"_postman_id": "61b36312-366c-4952-97a6-59d9eccaa991",
+		"name": "Курсовая №2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28177286",
+		"_collection_link": "https://cloudy-firefly-993919.postman.co/workspace/%25D0%259D%25D0%25BE%25D0%25B2%25D0%25BE%25D0%25B5-%25D0%25BF%25D1%2580%25D0%25BE%25D1%2581%25D1%2582%25D1%2580%25D0%25B0%25D0%25BD%25D1%2581%25D1%2582%25D0%25B2%25D0%25BE~9f2bc9d1-a9d8-4963-98a6-4a6aab19e136/collection/28177286-61b36312-366c-4952-97a6-59d9eccaa991?action=share&source=collection_link&creator=28177286"
+	},
+	"item": [
+		{
+			"name": "Получение информации",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\": \"2023-08-13T00:00:00+03:00\",\r\n    \"till\": \"2023-08-18T00:00:00+03:00\",\r\n    \"onlyTypes\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/events",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание личного события с валидными данными в будущем",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"id\"\r",
+							"var value = pm.response.json().data.payload.id\r",
+							"pm.collectionVariables.set(key, value)\r",
+							"\r",
+							"\r",
+							"var key = \"startAt\"\r",
+							"var value = pm.response.json().data.startAt\r",
+							"pm.collectionVariables.set(key, value)\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"backgroundColor\": \"#FFF7C7\",\r\n    \"color\": \"#FAC641\",\r\n    \"description\": \"Учеба в кайф\",\r\n    \"title\": \"Дьяконов\",\r\n    \"startAt\": \"2023-08-14T01:00:00+03:00\",\r\n    \"endAt\": \"2023-08-14T01:30:00+03:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/createPersonal",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации после создания события",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\": \"2023-08-14T00:00:00+03:00\",\r\n    \"till\": \"2023-08-18T00:00:00+03:00\",\r\n    \"onlyTypes\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/events",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Редактирование личного события с новыми валидными значениями",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"backgroundColor\": \"#FFF7C7\",\r\n    \"color\": \"#FAC641\",\r\n    \"description\": \"Учеба\",\r\n    \"title\": \"Дьяконов Николай\",\r\n    \"startAt\": \"2023-08-14T01:00:00+03:00\",\r\n    \"endAt\": \"2023-08-14T01:30:00+03:00\",\r\n    \"id\": {{id}},\r\n    \"oldStartAt\": \"{{startAt}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/updatePersonal",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации после редактирования",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\": \"2023-08-08T00:00:00+03:00\",\r\n    \"till\": \"2023-08-12T00:00:00+03:00\",\r\n    \"onlyTypes\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/events",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Редактирование изменение даты личного события (из будущего в прошлое)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"backgroundColor\": \"#FFF7C7\",\r\n    \"color\": \"#FAC641\",\r\n    \"description\": \"Учеба\",\r\n    \"title\": \"Дьяконов Николай\",\r\n    \"startAt\": \"2023-08-14T01:00:00+03:00\",\r\n    \"endAt\": \"2023-08-14T01:30:00+03:00\",\r\n    \"id\": {{id}},\r\n    \"oldStartAt\": \"{{startAt}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/updatePersonal",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации после редактирования",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\": \"2023-08-08T00:00:00+03:00\",\r\n    \"till\": \"2023-08-12T00:00:00+03:00\",\r\n    \"onlyTypes\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/events",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Редактирование личного события (изменить название события)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"backgroundColor\": \"#FFF7C7\",\r\n    \"color\": \"#FAC641\",\r\n    \"description\": \"Учеба\",\r\n    \"title\": \"Дьяконов Николай\",\r\n    \"startAt\": \"2023-08-14T01:00:00+03:00\",\r\n    \"endAt\": \"2023-08-14T01:30:00+03:00\",\r\n    \"id\": {{id}},\r\n    \"oldStartAt\": \"{{startAt}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/updatePersonal",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации после редактирования",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\": \"2023-08-08T00:00:00+03:00\",\r\n    \"till\": \"2023-08-12T00:00:00+03:00\",\r\n    \"onlyTypes\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/events",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление события ранее созданного из прошлого",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": {{id}},\r\n    \"startAt\": \"{{startAt}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/removePersonal",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"removePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации после удаления",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\": \"2023-08-08T00:00:00+03:00\",\r\n    \"till\": \"2023-08-12T00:00:00+03:00\",\r\n    \"onlyTypes\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/events",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление уже ранее удаленного события",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": {{id}},\r\n    \"startAt\": \"{{startAt}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/removePersonal",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"removePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации после повторного удаления",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\": \"2023-08-08T00:00:00+03:00\",\r\n    \"till\": \"2023-08-12T00:00:00+03:00\",\r\n    \"onlyTypes\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/events",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание личного события с пустыми данными",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"backgroundColor\": \"\",\r\n    \"color\": \"\",\r\n    \"description\": \"\",\r\n    \"title\": \"\",\r\n    \"startAt\": \"2023-08-14T01:00:00+03:00\",\r\n    \"endAt\": \"2023-08-14T01:30:00+03:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/createPersonal",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\": \"2023-08-08T00:00:00+03:00\",\r\n    \"till\": \"2023-08-12T00:00:00+03:00\",\r\n    \"onlyTypes\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/events",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание личного события с некорректной датой",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"your_variable_name_here\"\r",
+							"var value = pm.response.json().id //Вместо id можно использовать другое поле  json\r",
+							"pm.collectionVariables.set(key, value)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"backgroundColor\": \"#FFF7C7\",\r\n    \"color\": \"#FAC641\",\r\n    \"description\": \"Учеба в кайф\",\r\n    \"title\": \"Дьяконов\",\r\n    \"startAt\": \"20-08-14T01:00:00+03:00\",\r\n    \"endAt\": \"23-08-14T01:30:00+03:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/createPersonal",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\": \"2023-08-08T00:00:00+03:00\",\r\n    \"till\": \"2023-08-12T00:00:00+03:00\",\r\n    \"onlyTypes\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/events",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание личного события с числами в названии события",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"backgroundColor\": \"#FFF7C7\",\r\n    \"color\": \"#FAC641\",\r\n    \"description\": \"Учеба в кайф\",\r\n    \"title\": \"67556 \",\r\n    \"startAt\": \"2023-08-14T01:00:00+03:00\",\r\n    \"endAt\": \"2023-08-14T01:30:00+03:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/createPersonal",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\": \"2023-08-08T00:00:00+03:00\",\r\n    \"till\": \"2023-08-12T00:00:00+03:00\",\r\n    \"onlyTypes\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/events",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание личного события без даты",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"backgroundColor\": \"#FFF7C7\",\r\n    \"color\": \"#FAC641\",\r\n    \"description\": \"Учеба в кайф\",\r\n    \"title\": \"Дьяконов\",\r\n    \"startAt\": \"\",\r\n    \"endAt\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/createPersonal",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\": \"2023-08-08T00:00:00+03:00\",\r\n    \"till\": \"2023-08-12T00:00:00+03:00\",\r\n    \"onlyTypes\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}{{Version}}/schedule/events",
+					"host": [
+						"{{baseURL}}{{Version}}"
+					],
+					"path": [
+						"schedule",
+						"events"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "https://api-teachers.skyeng.ru/",
+			"type": "string"
+		},
+		{
+			"key": "Version",
+			"value": "v2",
+			"type": "string"
+		},
+		{
+			"key": "Token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NTk2OTMzLCJpZGVudGl0eSI6InRlc3QudHN0MzE3QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJpZGVudGl0eVBob25lIjpudWxsLCJuYW1lIjoiXHUwNDEwXHUwNDQxXHUwNDQyXHUwNDQ1XHUwNDM4XHUwNDNhIiwic3VybmFtZSI6Ilx1MDQxMFx1MDQzY1x1MDQzOFx1MDQ0MFx1MDQ0Zlx1MDQzZCIsImVtYWlsIjoidGVzdC50c3QzMTdAc2t5ZW5nLnJ1IiwidWlMYW5ndWFnZSI6InJ1IiwibG9jYWxlIjoicnUiLCJzZXJ2aWNlTG9jYWxlIjpudWxsLCJ1YXMiOjMwLCJqd3RUeXBlIjoxLCJqdGkiOiIybWpoa1JvQjRKZmZrS05HYWVOckdvMGJUeTNVeVJ3aSIsImJyYW5kIjpudWxsLCJleHAiOjE2OTE5NTAwNTEsImF2YXRhclVybCI6Imh0dHBzOlwvXC9hdXRoLWF2YXRhcnMtc2t5ZW5nLmltZ2l4Lm5ldFwvMTQ1OTY5MzNcLzk4ZjZiZWI1LWYwN2ItNDFlYi04YmMyLTQ1NzE0MGE3NDg4Mz9hdXRvPWZvcm1hdCUyQ2VuaGFuY2UmZml0PWNyb3AmaD0yMDAmaXhsaWI9cGhwLTIuMS4xJnE9NzUmc2F0PTgmc2hhcnA9MTAmdmliPTgmdz0yMDAiLCJhSXNTdHJvbmciOnRydWUsImFUeXBlIjoiVVNFUk5BTUVfUEFTU1dPUkQiLCJhVGltZSI6MTY5MTUzMjcwNSwicm9sZXMiOlsiUk9MRV9URUFDSEVSX0NBTkRJREFURSIsIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEVfQkFTRV9BQ0NFU1MiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.ckd4cIO5NBcMeo-PwbLUDdjOqrTqFBE1arvqAS7J40ZFYSbfxlAOLQY0UzM-0_SojVUp_l7_kWIPtFp6uuhlZwCPSdKLJsM8AAnX8_eRr0Nb-ov96R9I6BbgDUl6fXu8xfRiEfWQW08Ly6TyZAXKpfThomwwE3Gzvki6N9KWvWZdeebMXjFQQXignAhKaxmm2NmHMtZ66iWk4HbcW53Xo_0vs-34d6yfv436vUJikbeyCboa9_o1nmpR5EL1YtAUHQIRc9z_U6xDaAojz-mMzo7d-MZ5PWj3Tote6ZRAOByL71e7nR2sF4xNESsE0UmatiqfP7wTz4ncev0mSpLZOk0h2ktwmvgJyfz5LWu2FpHUsowEsv4VQ6_WVF80zsF5A2Z1v87P5j_265JrJt1rICFJwaZeY7jLv2NIjaTeAcfafNjPrSXG1Owj_e-RqL01tqnTF7lhhB_-wdbySP9jkcarsBYrLX9Cs9z3GfIwomEwcprVzwzdCeGdGDzCKfdqclo5wzSBKC2CShRkoB5T45MN6V7OfL9C5W9hH6akEA1tJTyuaE3ticL5ToNLKXFV1jk6hZW4tidaT-aJNDxVO7riG3fZJtqtH9uVhxXqKvduerwsHWKNuX2SDm3QBE6IrVQDGTnqwFYrxFsBPmuCq-qQUMtlJdHTQnSOcR-UQok",
+			"type": "string"
+		},
+		{
+			"key": "id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "startAt",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "your_variable_name_here",
+			"value": ""
+		}
+	]
+}
