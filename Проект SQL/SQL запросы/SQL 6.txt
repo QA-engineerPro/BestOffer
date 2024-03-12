@@ -1,0 +1,30 @@
+SELECT COUNT (*)
+FROM student
+WHERE level='Upper-Intermediate';
+
+
+SELECT COUNT (*)
+FROM student
+WHERE level='Upper-Intermediate'AND 
+education_form='group';
+
+SELECT COUNT (*)
+FROM users
+WHERE subject_id = 1;
+
+SELECT subject_id,COUNT (*)
+FROM users
+GROUP BY subject_id 
+;
+
+
+SELECT level,COUNT (*)
+FROM student
+WHERE education_form = 'group'AND 
+subject_id = 1
+GROUP BY  level;
+
+
+SELECT group_id, COUNT (*)
+FROM group_student
+GROUP BY group_id;

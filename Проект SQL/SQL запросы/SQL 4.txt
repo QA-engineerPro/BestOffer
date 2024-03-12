@@ -1,0 +1,27 @@
+Определите id учеников, которые занимаются в группе у преподавателя с teacher_id = 30239. Таблицы для запроса: group_student и teacher.
+
+SELECT s.user_id,
+t.teacher_id
+FROM group_student AS s
+INNER JOIN teacher AS t
+ON s.group_id = t.group_id
+WHERE teacher_id = 30239;
+
+
+Определите email преподавателя группы, в которой занимается ученик с user_id = 11527. Таблицы для запроса: group_student и teacher.
+
+SELECT s.user_id,
+t.email teacher_email
+FROM group_student AS s
+INNER JOIN teacher AS t
+ON s.group_id = t.group_id
+WHERE user_id = 11527;
+
+Определите id преподавателя группы, в которой занимается наибольшее количество учеников. Таблицы для запроса: group_student и teacher.
+
+SELECT teacher_id, COUNT(*) as student_count
+FROM group_student AS s
+INNER JOIN teacher AS t
+ON s.group_id = t.group_id
+GROUP BY teacher_id
+ORDER BY student_count DESC;

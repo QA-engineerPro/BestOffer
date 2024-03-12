@@ -1,0 +1,43 @@
+
+
+1/Найдите учеников и все группы, в которых преподает учитель с почтой blanda.jamil@yahoo.com.
+ 
+SELECT s.user_id, 
+s.group_id,
+t.teacher_id,
+t.email 
+FROM group_student AS s
+INNER JOIN teacher AS t
+ON s.group_id = t.group_id
+WHERE email='blanda.jamil@yahoo.com';
+
+2/Выведите уровень ученика с почтой gpagac@jacobs.com.
+
+
+SELECT s.level, 
+s.user_id,
+u.user_email
+FROM student AS s
+INNER JOIN users AS u
+ON s.user_id = u.user_id
+WHERE user_email='gpagac@jacobs.com';
+
+3/Выведите уникальные названия предметов, которые изучает ученик c user_id=11300 (таблицы user и subject).
+
+SELECT s.subject_id, 
+s.subject_title,
+u.user_id
+FROM subject AS s
+INNER JOIN users AS u
+ON s.subject_id = u.subject_id
+WHERE user_id=11300;
+
+4/Выведите уникальные уровни учеников, которые занимаются в группе с id = 10.
+
+SELECT s.level, 
+g.group_id,
+s.user_id
+FROM student AS s
+INNER JOIN group_student AS g
+ON s.user_id = g.user_id
+WHERE g.group_id = 10;

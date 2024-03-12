@@ -1,0 +1,36 @@
+
+
+SELECT level AS stud_level
+FROM student AS s
+WHERE user_id = 9651;
+
+
+SELECT email FROM teacher WHERE teacher_id IN(30019,31433);
+
+
+SELECT * FROM student
+WHERE (level='Advanced' AND education_form='group')
+OR (level='Upper-Intermediate' AND education_form='personal');
+
+
+SELECT * FROM teacher WHERE group_id BETWEEN 180 AND 190;
+
+
+SELECT * FROM users WHERE user_email LIKE '%yahoo.com';
+
+
+INSERT INTO subject (subject_id, subject_title)
+VALUES(16, 'Chinese');
+
+
+SELECT * FROM teacher WHERE teacher_id = 5562;
+
+
+
+INSERT INTO posts (post_id, text_len, post_date)
+VALUES
+(1, 6799, '09.03.2023'),
+(2,7800, '12.03.2023'),
+(3, 6907, '19.03.2023'),
+(4, 8890, '22.03.2023'),
+(5, 9802, '30.03.2023');

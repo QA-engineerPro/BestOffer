@@ -1,0 +1,28 @@
+SELECT level,education_form, COUNT (*)
+FROM student
+WHERE education_form = 'personal'
+GROUP BY  level, education_form;
+
+
+SELECT level,education_form, COUNT (*)
+FROM student
+WHERE level = 'Advanced'
+GROUP BY  level, education_form;
+
+
+SELECT level,education_form, COUNT (*)as student_count
+FROM student
+GROUP BY  level, education_form
+ORDER BY level ASC,
+education_form DESC;
+
+
+SELECT MIN(group_id),MAX(group_id)
+FROM group_student
+;
+
+SELECT group_id, COUNT(*)as student_count
+FROM group_student
+GROUP BY group_id
+ORDER BY student_count DESC;
+

@@ -1,0 +1,17 @@
+1 задание
+
+SELECT user_id FROM users WHERE user_email ='houston42@gmail.com'; id=14924
+
+SELECT level FROM student WHERE user_id = 44133;  Beginner
+
+SELECT subject_title FROM subject WHERE subject_id = 8; History
+
+SELECT email FROM teacher WHERE group_id = 80; eldora.walsh@hotmail.com
+
+SELECT DISTINCT education_form FROM student WHERE user_id = 12203;  "group", "personal"
+
+2 задание
+
+SELECT teacher_id FROM rooms WHERE floor_num=2; teacher_id=33576, 33902
+
+SELECT teacher_id FROM salary WHERE salary_val='EUR'; teacher_id=29410, 33902
