@@ -31,7 +31,7 @@
 
 
 ## Контактная информация
-</ol> Email: nikolay_kazan@mail.ru
-</ol>Телефон : +79534973948
-</ol>Telegram: @NikolayDyakonov
-</ol>Резюме на hh: https://kazan.hh.ru/applicant/resumes/view?resume=6ba94dbfff0c7d7ffb0039ed1f496c51666874
+<p> Email: nikolay_kazan@mail.ru
+<p>Телефон : +79534973948
+<p>Telegram: @NikolayDyakonov
+<p>Резюме на hh: https://kazan.hh.ru/applicant/resumes/view?resume=6ba94dbfff0c7d7ffb0039ed1f496c51666874
